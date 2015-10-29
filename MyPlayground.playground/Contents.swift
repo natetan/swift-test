@@ -1,71 +1,55 @@
 //: Playground - noun: a place where people can play
 
 import UIKit
+import Darwin
 
 var str = "Hello, playground"
+var message: String = "This is a string"
 
-var sampleVariable = 1     // This is how you define a new variable
-let sampleConstant = "Constant" // This is how you define a new constant
+// let is for constants
 
-var sampleInteger: Int = 3  // Defining a variable with an explicit type
-let sampleString: String = "Another Constant"
+let pi = 3.141592654
 
-// Including values/expressions inside strings ("The sum is: 4")
-let sumString = "The sum is: \(sampleVariable + sampleInteger)"
+// use a forward slash to add in a var or constant
+println("pi is equal to \(pi)")
 
-var sampleList = ["item1", "item2", "item3"]      // Defining an array
-var sampleDict = ["key1" : "value1", "key2" : "value2"] // Defining a dictionary
+let numberOfStairs: Int = 7
 
-sampleList[1] = "Updated Item"  // Setting the value of an element
-println(sampleDict["key2"]( // Reading the value of an element
+let age = "19"
+let ageInt = age.toInt()
 
-// This is how you define an optional
-var optionalString: String? = "Temp"
+println("Kane is a \(numberOfStairs) stair")
 
-// This is a simple condition
-if (sampleInteger > 4) {
-    println("true")
+let firstName = "Yulong"
+let lastName = "Tan"
+let fullName = firstName + " " + lastName
+println("My name is " + fullName)
+
+let range = 11
+// Prints a random number between 0 (inclusive) and range (exclusive)
+let random = arc4random()
+println("Here is a random number: \(random)")
+
+if (ageInt < 16) {
+    println("You can't drive yet, dummy")
+} else if (ageInt == 16) {
+    println("You can now officially drive")
 } else {
-    // Using 'if' and 'let' together allows you to check for values that might be missing
-    if let nonOptionalString = optionalString {
-        println("The string's value is: \(nonOptionalString)")
-    } else {
-        // If we made it here, it means that the optionalString's value was nil
-    }
+    println("You've already been driving for a while now")
 }
 
-// This is how you use a switch statement
-switch sampleString {
-    // Switch statements aren't limited to just integers
-case "Constant":
-    sampleInteger = 10
-    
-    // No need to add 'break' statements. Only matching ones will be executed
-case "Another Constant", "Some Constant":
-    sampleInteger = 11
-    
-    // Switch statements support a variety of comparison operations
-case let x where x.hasPrefix("Constant"):
-    sampleInteger = 12
-    
-    // The switch must cover all cases, so a default case should be used
+let ingredients = "ice"
+
+switch ingredients {
+    case "pasta", "tomato":
+        println("why not spaghetti?")
+        fallthrough
+    case "potato":
+        println("chips!")
+    case "pinto beans":
+        println("time to get some chipotle")
 default:
-    sampleInteger = 13
-}
-
-// A simple for loop
-for (var i = 0; i < 6; i++) {
-    println("This is round #\(i)")
-}
-
-// A simple loop on a dictionary
-for (key, value) in sampleDict {
-    println("The value for \(key) is \(value)")
-}
-
-// A simple loop on an array
-for item in sampleList {
-    println("The current item is \(item)")
+    println("get me a coke instead")
 }
 
 
