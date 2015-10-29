@@ -52,6 +52,21 @@ default:
     println("get me a coke instead")
 }
 
+let iHateXcode = true
+
+if (iHateXcode) {
+    println("Xcode is hard to use and sucks. Swift coding also feels odd")
+    println("taylor is still bae though")
+}
+
+func reverse(phrase: String)->String {
+    var output = "";
+    for (var i = count(phrase) - 1; i >= 0; i--) {
+        output += Array(arrayLiteral: phrase)[i]
+    }
+    return output;
+}
+
 
 
 
