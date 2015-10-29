@@ -6,6 +6,8 @@ import Darwin
 var str = "Hello, playground"
 var message: String = "This is a string"
 
+
+
 // let is for constants
 
 let pi = 3.141592654
